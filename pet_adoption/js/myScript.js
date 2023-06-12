@@ -13,6 +13,15 @@ let fetchData = async (url,func) => {
   func(data);
 }
 
+let displayYear = () => {
+  let year = document.getElementById("year");
+  let d = new Date();
+
+  year.innerHTML = d.getFullYear();
+}
+
+displayYear();
+
 /*Functions*/
 function showMenuLinks() {
   document.getElementById("mobile-nav").style.width = "250px";
@@ -45,3 +54,28 @@ function hideSearchBar() {
   document.getElementsByClassName("fa-bars")[0].style.transform = "translate(0%, 0%)";
 }
 
+let displayDogPics = (data) => {
+  let pics = document.getElementById("dog-pics");
+
+  pics.innerHTML = `
+    <img src="${data.message}" style="width:250px !important; height:200px;">
+  `;
+}
+
+let getDogPhoto = () => {
+  fetchData("https://dog.ceo/api/breeds/image/random", displayDogPics);
+}
+
+getDogPhoto();
+
+if(document.getElementsByTagName("title")[0].innerHTML == "Site Name | Home") {
+  setInterval(getDogPhoto, 5000);
+}
+
+
+// let animalPicDiv = document.getElementById("animal-pics");
+// let picURL = [];
+
+// let displayNodes = () => {
+//   picURL.push(animalPicDiv.childNodes[3].childNodes[1].src);
+// }

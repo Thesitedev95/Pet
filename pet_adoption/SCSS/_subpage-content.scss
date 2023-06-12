@@ -1,0 +1,8 @@
+@import "./variables";
+
+.sub-title {
+    margin-bottom: .5em;
+    background: lighten($tan, 25%);
+    width: 80%;
+    padding: 0 5px;
+}

@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Name | Home</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="top-bar"></div>
-
   <div class="body-container">
+    <div class="top-bar"></div>
+
     <header class="header">
       <div class="header-logo">
         <img src="imgs/logo-no-bg.png" alt="Logo for the company">
@@ -23,7 +23,7 @@
         <i class="fa fa-times nav-close" onclick="hideMenuLinks()"></i>
         <ul>
           <li><a href="#" title="">Home</a></li>
-          <li><a href="" title="">Link</a></li>
+          <li><a href="./process.html">Adoption Process</a></li>
           <li><a href="" title="">Link</a></li>
           <li><a href="" title="">Link</a></li>
         </ul>
@@ -38,11 +38,12 @@
       </div>
     </header>
 
+    
     <nav class="mobile-nav" id="mobile-nav">
       <i class="fa fa-times nav-close" onclick="hideMenuLinks()"></i>
       <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Link 2</a></li>
+        <li><a href="./process.html">Adoption Process</a></li>
         <li><a href="#">Link 3</a></li>
         <li><a href="#">Link 4</a></li>
         <li><a href="#">Link 5</a></li>
@@ -104,13 +105,25 @@
       </div>
     </section>
 
+    <section class="animal-pics" id="animal-pics">
+      <div class="container">
+        <!-- <i class="fa fa-chevron-left" id="left-arrow"></i> -->
+        <h1 class="section-title">Suceess Stories</h1>
+        <p class="description">
+           Below is a slideshow of some of our adoption successes. <br><br>
+        </p>
+        <div id="dog-pics"></div>
+        <!-- <i class="fa fa-chevron-right" id="right-arrow"></i> -->
+      </div>
+    </section>
+
     <div class="push-footer"></div>
 
-    <footer>
-      <nav id="footer-nav">
+    <footer class="footer">
+      <nav class="footer-nav">
         <ul>
           <li><a href="#" title="View and Adopt a pet">View/Adopt a pet</a></li>
-          <li><a href="#" title="Learn more about process">Learn about the process</a></li>
+          <li><a href="./process.html" title="Learn more about process">Learn about the process</a></li>
           <li><a href="#" title="Learn more about process">A third link</a></li>
           <li><a href="#" title="Learn more about process">Contact Us</a></li>
         </ul>
@@ -124,7 +137,7 @@
         <a href="#"><i class="fa fa-google"></i></a>
       </div>
 
-      <p id="copyright">&copy; Copyright 2021 Marcus Lundy</p>
+      <p id="copyright">&copy; Copyright <span id="year"></span> Marcus Lundy</p>
       </nav>
 
     </footer>
