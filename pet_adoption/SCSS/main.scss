@@ -17,8 +17,7 @@ html, body {
 body {
   font-family: 'montserrat', sans-serif;
   min-width: 320px;
-  /* background: antiquewhite; */
-  max-width: 425px;
+  // max-width: 425px;
 }
 
 .body-container {
@@ -56,4 +55,5 @@ a {
 @import "./banner";
 @import "./home-main-content";
 @import "./subpage-content";
+@import "./media-queries";
 @import "./footer";

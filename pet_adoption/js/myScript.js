@@ -72,10 +72,16 @@ if(document.getElementsByTagName("title")[0].innerHTML == "Site Name | Home") {
   setInterval(getDogPhoto, 5000);
 }
 
+let contactFormFields = document.querySelectorAll(".c-form");
 
-// let animalPicDiv = document.getElementById("animal-pics");
-// let picURL = [];
+contactFormFields.forEach(field => {
+  field.addEventListener('focus', (e) => {
+    e.target.style.background = "#EADDCA";
+  })
+})
 
-// let displayNodes = () => {
-//   picURL.push(animalPicDiv.childNodes[3].childNodes[1].src);
-// }
+contactFormFields.forEach(field => {
+  field.addEventListener('focusout', (e) => {
+    e.target.style.background = "white";
+  })
+})
